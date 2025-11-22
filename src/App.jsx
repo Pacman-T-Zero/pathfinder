@@ -173,6 +173,15 @@ const getRandomQuestions = (pool, count) => {
   return shuffled.slice(0, count);
 };
 
+// --- COMPONENT: TYPING INDICATOR ---
+const TypingIndicator = () => (
+  <div className="flex gap-1 p-2 bg-white rounded-xl w-fit border border-gray-200 items-center animate-in fade-in slide-in-from-bottom-2 duration-300">
+    <span className="w-2 h-2 bg-gray-400 rounded-full animate-bounce [animation-delay:-0.3s]"></span>
+    <span className="w-2 h-2 bg-gray-400 rounded-full animate-bounce [animation-delay:-0.15s]"></span>
+    <span className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></span>
+  </div>
+);
+
 // --- MAIN COMPONENT ---
 export default function App() {
   const [messages, setMessages] = useState([]);
